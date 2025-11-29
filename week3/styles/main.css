@@ -6,7 +6,7 @@
     --heading-font: 'Georgia', serif;
     --body-font: 'Arial', sans-serif;
     --mobile-width: 599px;
-    --grid-gap: 2rem; 
+    --grid-gap: 2rem;
     --content-bg: rgba(255, 255, 255, 0.75);
     --data-text-color: #333;
 }
@@ -36,17 +36,6 @@ header h1 {
     background-color: var(--accent-color);
 }
 
-nav {
-    margin-bottom: 1rem;
-}
-
-nav a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    display: inline-block;
-}
-
 main {
     position: relative;
     padding: 1rem;
@@ -72,7 +61,8 @@ main {
     box-shadow: none;
 }
 
-.hero picture, .hero img {
+.hero picture,
+.hero img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -104,7 +94,7 @@ main {
 }
 
 .data-section .data-content {
-    padding: 1.5rem; 
+    padding: 1.5rem;
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -112,7 +102,7 @@ main {
 }
 
 .data-section .data-point {
-    padding: 0; 
+    padding: 0;
     margin: 0;
     text-align: left;
     color: var(--data-text-color);
@@ -129,6 +119,7 @@ main {
     margin-left: 0.3rem;
     color: var(--data-text-color);
 }
+
 .weather-card {
     background-color: var(--content-bg);
     z-index: 1;
@@ -192,7 +183,7 @@ main {
     width: 50px;
     height: 50px;
     margin: 0 auto 1rem;
-    display: block; 
+    display: block;
 }
 
 footer {
@@ -201,10 +192,12 @@ footer {
     padding: 10px 0;
     margin-top: 20px;
 }
+
 footer p {
     color: #363535;
     font-size: 14px;
 }
+
 @media (min-width: 600px) {
     main {
         display: grid;
@@ -214,6 +207,7 @@ footer p {
         gap: var(--grid-gap);
         padding: 2rem;
     }
+
     .weather-icon-mobile {
         display: none;
     }
