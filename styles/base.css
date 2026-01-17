@@ -103,7 +103,7 @@ section.card h2 {
 }
 
 section.card a {
-    color: #4CAF50;
+    color: #244C24;
     display: inline-block;
     margin: 8px 4px;
     padding: 5px;
@@ -120,7 +120,11 @@ footer {
     margin-top: 20px;
 }
 
-footer p {
+footer .currentyear {
+    color: #424242;
+    font-size: 14px;
+}
+footer .lastmodified {
     color: #424242;
     font-size: 14px;
 }
