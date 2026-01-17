@@ -1,0 +1,151 @@
+/* /Users/tylerkraft/Desktop/BYU/Web/wdd131/W02/styles/temples.css */
+
+/* Mobile-first reset */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    line-height: 1.4;
+    background: #fff;
+    color: #111;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0 1rem 0;
+    text-align: center;
+}
+
+/* Hamburger button styling */
+#hamburger {
+    display: block;
+    background: #766153;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+}
+
+/* Navigation - mobile view (hidden by default) */
+nav {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0;
+    background: #766153;
+    color: #fff;
+    border-bottom: 1px solid #e6e6e6;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 9;
+}
+
+/* Show nav when open class is active */
+nav.open {
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: block;
+}
+
+nav a:last-child {
+    border-bottom: none;
+}
+
+header {
+    position: relative;
+}
+
+/* Main container: limited width and centered */
+main {
+    max-width: 900px; /* limit width */
+    margin: 0 auto;   /* center horizontally */
+    padding: 1rem;
+    background-color: #BCBD8B;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+figcaption {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+}
+/* Temple gallery grid (mobile-first) */
+.temple-gallery {
+    display: grid;
+    grid-template-columns: 1fr; /* one column on mobile */
+    gap: 1rem;
+}
+
+/* Temple card and image sizing */
+.temple-card {
+    margin: 0;
+    background: #fff;
+    border: 1px solid #e9e9e9;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Constrain images so they fit columns and look consistent */
+.temple-card img {
+    display: block;
+    width: 100%;
+    height: 180px; /* limit height so grid items are consistent */
+    object-fit: cover; /* crop without distortion */
+}
+
+.temple-card figcaption {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+/* Optional: small screens spacing tweak */
+@media (max-width: 360px) {
+    nav { padding-left: 0.5rem; padding-right: 0.5rem; }
+    main { padding-left: 0.75rem; padding-right: 0.75rem; }
+}
+
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+footer p {
+    color: #363535;
+    font-size: 14px;
+}
+nav a:hover,
+nav a:focus {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: var(--secondary-color);
+    transform: translateY(-2px);
+    outline: none;
+}
+
+nav a:focus-visible {
+    box-shadow: 0 0 0 3px rgba(2, 82, 156, 0.18);
+}

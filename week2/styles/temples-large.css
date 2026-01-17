@@ -1,0 +1,64 @@
+@media (min-width: 768px) {
+    .main-column {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* temple gallery uses 2 columns on medium screens */
+    .temple-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* limit temple card image height (target only temple images) */
+    .temple-card img {
+        height: 240px;
+        object-fit: cover;
+    }
+
+    /* Show navigation on larger screens */
+    nav {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+        width: auto;
+        margin: 0;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    nav a {
+        padding: 0.35rem 0.5rem;
+        border-bottom: none;
+    }
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+
+    /* Hide hamburger button on larger screens */
+    #hamburger {
+        display: none;
+    }
+
+    header {
+        position: static;
+    }
+}
+
+@media (min-width: 1024px) {
+    .main-column {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* temple gallery uses 3 columns on large screens */
+    .temple-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .temple-card img {
+        height: 300px;
+        object-fit: cover;
+    }
+}
