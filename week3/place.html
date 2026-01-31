@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Iceland: The Land of Fire and Ice</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <h1>Visit Iceland</h1>
+    </header>
+
+    <main>
+        <section class="hero">
+                <img src="images/iceland.jpeg" alt="Vibrant Northern Lights over Iceland" loading="lazy" width="800" height="500">
+            <div class="hero-text">
+                <h2>The Land of Fire and Ice</h2>
+            </div>
+        </section>
+        <section class="weather-card">
+            <h2>Weather <span></span></h2> <div class="weather-content">
+                <img src="images/reshot-icon-weather-8CKJB9YN7X.svg" alt="Cloudy with sun icon" class="weather-icon-mobile">
+                <p><strong>Temperature:</strong> <span id="temp">-3</span> °C</p>
+                <p><strong>Conditions:</strong> Cloudy</p>
+                <p><strong>Wind Speed:</strong> <span id="wind-speed">21</span> KM</p>
+                <p><strong>Wind Chill:</strong> <span id="windchill-value"></span></p>
+            </div>
+        </section>
+
+        <section class="data-section">
+            <h2 class="data-title">Data</h2> <div class="data-content">
+                <p class="data-point"><span class="label">Area:</span> <span class="value">39,769 sq km</span></p>
+                <p class="data-point"><span class="label">Population:</span> <span class="value">404,610</span></p>
+                <p class="data-point"><span class="label">Capital:</span> <span class="value">Reykjavík</span></p>
+                <p class="data-point"><span class="label">Languages:</span> <span class="value">Icelandic, English, Danish, German</span></p>
+                <p class="data-point"><span class="label">Currency:</span> <span class="value">Icelandic Króna</span></p>
+                <p class="data-point"><span class="label">Time Zone:</span> <span class="value">UTC+0</span></p>
+                <p class="data-point"><span class="label">Calling Code:</span> <span class="value">+354</span></p>
+                <p class="data-point"><span class="label">Internet TLD:</span> <span class="value">.is</span></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            <span id="currentyear"></span> &copy; Tyler Kraft
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/main.js" defer></script>
+</body>
+</html>
