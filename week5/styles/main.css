@@ -1,0 +1,233 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #850000;
+    --background-color: #f4f6f8;
+    --card-background: #ffffff;
+    --text-color: #333;
+    --border-color: #ccc;
+    --focus-ring: rgba(44, 62, 80, 0.5);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--card-background);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+footer {
+    background-color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+input[type="radio"] {
+    display: none;
+    position: relative;
+    caret-color: rgba(0, 0, 0, 0);
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+    color: #850000;
+    width: 30px;
+    height: 30px;
+    font-size: 2rem;
+    margin-left: 5px;
+    align-items: center;
+    caret-color: rgba(0, 0, 0, 0);
+}
+
+.material-symbols-outlined.filled {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.material-symbols-outlined:hover~.material-symbols-outlined {
+    transform: scale(1.2);
+}
+
+.material-symbols-outlined:hover~.material-symbols-outlined {
+    transform: scale(1);
+}
+
+.material-symbols-outlined:active~.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+#reviewForm {
+    background-color: var(--card-background);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+fieldset {
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 0 10px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--focus-ring);
+}
+
+.checkbox-group>div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 30px;
+    margin-top: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+.checkbox-group label {
+    display: inline-block;
+    font-weight: normal;
+    color: var(--text-color);
+    margin-bottom: 0;
+}
+
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.stars input[type="radio"] {
+    display: none;
+}
+
+.stars label {
+    display: none;
+}
+
+.stars input:checked~label,
+.stars label:hover,
+.stars label:hover~label {
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.submit-group {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.submit-button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.submit-button:hover {
+    background-color: #c0392b;
+}
+
+.submit-button:active {
+    transform: scale(0.99);
+}
+
+.confirmation-message {
+    background-color: var(--card-background);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.confirmation-message p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.confirmation-message a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.confirmation-message a:hover {
+    text-decoration: underline;
+}
+
+.count-display {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ecf0f1;
+    border-radius: 4px;
+    font-weight: bold;
+    color: var(--primary-color);
+}

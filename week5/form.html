@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&icon_names=star"/>
+</head>
+
+<body>
+    <header>
+        <h1>Product Review Submission</h1>
+    </header>
+    <main>
+        <form id="reviewForm" method="get" action="review.html">
+
+            <fieldset>
+                <legend>Product Information</legend>
+
+                <div class="form-group">
+                    <label for="productName">Product Name:</label>
+                    <select id="productName" name="productName" required>
+                        <option value="" disabled selected>Select a Product ...</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="installDate">Date Installed:</label>
+                    <input type="date" id="installDate" name="installDate" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Your Feedback</legend>
+
+                <div class="form-group">
+                    <label>Overall Rating:</label>
+                    <div class="stars">
+                        <input type="radio" id="fivestar" name="stars" value="5" required><span
+                            class="material-symbols-outlined">star</span><label for="fivestar">fivestar</label>
+                        <input type="radio" id="fourstar" name="stars" value="4" required><span
+                            class="material-symbols-outlined">star</span><label for="fourstar">fourstar</label>
+                        <input type="radio" id="threestar" name="stars" value="3" required><span
+                            class="material-symbols-outlined"> star</span><label for="threestar">threestar</label>
+                        <input type="radio" id="twostar" name="stars" value="2" required><span
+                            class="material-symbols-outlined"> star</span><label for="twostar">twostar</label>
+                        <input type="radio" id="onestar" name="stars" value="1" required><span
+                            class="material-symbols-outlined"> star</span><label for="onestar">onestar</label>
+                    </div>
+                </div>
+                <div class="form-group checkbox-group">
+                    <label>Useful Features (Check all that apply):</label>
+                    <div>
+                        <input type="checkbox" id="featureDurability" name="feature" value="Durability">
+                        <label for="featureDurability">Durability</label>
+
+                        <input type="checkbox" id="featureEaseOfUse" name="feature" value="Ease of Use">
+                        <label for="featureEaseOfUse">Ease of Use</label>
+
+                        <input type="checkbox" id="featurePerformance" name="feature" value="Performance">
+                        <label for="featurePerformance">Performance</label>
+
+                        <input type="checkbox" id="featureDesign" name="feature" value="Aesthetic Design">
+                        <label for="featureDesign">Aesthetic Design</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="writtenReview">Written Review (Optional):</label>
+                    <textarea id="writtenReview" name="writtenReview" rows="5"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="userName">Your Name (Optional):</label>
+                    <input type="text" id="userName" name="userName">
+                </div>
+            </fieldset>
+
+            <div class="form-group submit-group">
+                <input type="submit" value="Submit Review" class="submit-button">
+            </div>
+
+        </form>
+    </main>
+    <footer>
+        <p>
+            <span id="currentyear"></span> &copy; Tyler Kraft
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

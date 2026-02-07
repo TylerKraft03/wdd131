@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <h1>🎉 Review Submitted!</h1>
+    </header>
+    <main>
+        <div class="confirmation-message">
+            <p>Thank you for submitting your review. Your feedback is greatly appreciated!</p>
+            <p>We have successfully recorded your submission.</p>
+            <p id="reviewCountDisplay" class="count-display">You have completed **0** reviews on this client.</p>
+            <p><a href="form.html">Submit another review</a></p>
+        </div>
+    </main>
+    <footer>
+        <p>
+            <span id="currentyear"></span> &copy; Tyler Kraft
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const countDisplay = document.getElementById('reviewCountDisplay');
+        let reviewCount = localStorage.getItem('reviewCount');
+
+        reviewCount = reviewCount ? parseInt(reviewCount) + 1 : 1;
+        localStorage.setItem('reviewCount', reviewCount);
+
+        countDisplay.innerHTML = `You have completed **${reviewCount}** reviews on this client.`;
+    });</script>
+</body>
+</html>
