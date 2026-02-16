@@ -1,0 +1,156 @@
+/* --- Global Styles and Theme Setup --- */
+:root {
+    --st-red: #E50914; /* Stranger Things title red */
+    --st-dark-bg: #1A1A1A; /* Dark background for contrast */
+    --st-text-light: #F5F5F5; /* Light text for high contrast */
+    --st-accent: #FFA500; /* Subtle orange/amber for accents (retro feel) */
+    --st-font-stack: 'Courier New', Courier, monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--st-font-stack);
+    background-color: var(--st-dark-bg);
+    color: var(--st-text-light);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- Header and Navigation --- */
+.header {
+    background-color: #000000;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 5px solid var(--st-red);
+}
+
+.header h1 {
+    color: var(--st-red);
+    font-size: 3em;
+    text-shadow: 0 0 10px var(--st-red);
+    margin-bottom: 10px;
+    letter-spacing: 5px;
+}
+
+.header p {
+    color: var(--st-accent);
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--st-text-light);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 1px solid var(--st-text-light);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--st-red);
+    color: var(--st-dark-bg);
+    border-color: var(--st-red);
+}
+
+/* --- Section Styling --- */
+.st-section {
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid var(--st-accent);
+    background-color: rgba(30, 30, 30, 0.8); /* Slight transparency */
+    box-shadow: 0 0 15px var(--st-accent);
+}
+
+.st-section h2 {
+    color: var(--st-red);
+    border-bottom: 2px solid var(--st-accent);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+.poster {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border: 2px solid var(--st-accent);
+    box-shadow: 0 0 10px var(--st-accent);
+}
+
+/* --- Character Grid and Cards --- */
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.character-card {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border: 3px solid var(--st-red);
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.5);
+    text-align: center;
+}
+
+.character-card h3 {
+    color: var(--st-accent);
+    margin-bottom: 10px;
+}
+
+.character-card img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border: 1px solid var(--st-text-light);
+    margin-bottom: 15px;
+    object-fit: cover;
+    display: block; /* Important for proper lazy loading block behavior */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* --- Mobile Responsiveness (Media Query) --- */
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 2em;
+        letter-spacing: 3px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        display: block; /* Full width button on mobile */
+    }
+
+    /* The character-grid will stack cards automatically due to auto-fit/minmax */
+}

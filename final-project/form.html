@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stranger Things Sweepstakes</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Stranger Things Sweepstakes</h1>
+        <p>Win a trip to the Upside Down (Disneyland)</p>
+        <nav>
+            <ul>
+                <li><a href="strangerthings.html">Home</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="form.html">Sweepstakes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="form-section">
+            <h2>Enter the Hawkins Gate Giveaway</h2>
+            <form id="sweepstakesForm">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="character">Favorite Character:</label>
+                    <select id="character" name="character" required>
+                        <option value="">-- Select One --</option>
+                        </select>
+                </div>
+                <button type="submit" id="submitButton">Enter the Drawing!</button>
+            </form>
+            <div id="output"></div>
+            <div id="checkLocalStorage"></div>
+        </section>
+    </main>
+    <script src="scripts/script.js" defer></script>
+    <footer>
+        <p>
+            <span id="currentyear"></span> &copy; Tyler Kraft
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>
